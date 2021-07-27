@@ -1,38 +1,37 @@
-from telebot import TeleBot                        # Модуль бота
-import time                                        # Временный модуль
-# Конфигурация бота, все настройки указаны тут
-import config as conf
+from telebot import TeleBot                        # Bot module
+import time                                        # Temporary module
+import config as conf                              # Bot configuration, all settings are listed here
 
 bot = TeleBot(conf.BOT_TOKEN)
 
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    '''Старт бота, дает наставления по использованию бота,
-    создает ячейку в базе данных для клиента'''
+    '''Start the bot, gives instructions on how to use the bot,
+     creates a cell in the database for the client'''
     pass
 
 
 @bot.message_handler(commands=['help'])
 def help(message):
-    '''Дает экскурс на пользование бота, какие есть команды'''
+    '''Gives an excursion on how to use the bot, what commands are there'''
     pass
 
 
 @bot.message_handler(commands=['myprofile'])
 def myprofile(message):
-    '''Профиль клиента, тут будет выдаваться inlinekeyboard'''
+    '''Client profile, inlinekeyboard will be issued here'''
     pass
 
 
 @bot.message_handler(commands=['settings'])
 def settings(message):
-    '''Настройки бота'''
+    '''Bot settings'''
     pass
 
 
-# Тут прописаны все Callback'и
+# All Callbacks are registered here
 
 
-# Запуск бота
+# Bot launch
 bot.polling()

@@ -1,1 +1,5 @@
-BOT_TOKEN = '1867518674:AAHgNlWYp6Uk9W2ebchRgUIuQziBnq-JuVw'  # Токен бота
+BOT_TOKEN = '1874638072:AAGwUF6R-ZbMlXsCgZo4g6POb-3VlDy0gfc'  # Bot token
+
+BOT_SETTINGS = {
+    'language': ['русский', 'українська']
+}
