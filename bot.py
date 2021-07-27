@@ -1,6 +1,6 @@
 from telebot import TeleBot                        # Bot module
 import time                                        # Temporary module
-import config as conf                              # Bot configuration, all settings are listed here
+import config                                      # Bot configuration, all settings are listed here
 
 bot = TeleBot(conf.BOT_TOKEN)
 
