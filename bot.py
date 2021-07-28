@@ -14,7 +14,7 @@ def start(message):
      creates a cell in the database for the client'''
     user = database.CreateUser(message.from_user.username)
     if user.AddUserToDB():
-        print('Its all right')
+        bot.send_message(message.chat.id, 'Hello!')
 
 
 @bot.message_handler(commands=['help'])
