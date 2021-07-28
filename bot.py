@@ -1,8 +1,10 @@
-from telebot import TeleBot                        # Bot module
-import time                                        # Temporary module
-import config                                      # Bot configuration, all settings are listed here
+from telebot import TeleBot  # Bot module
+# Modules for Inline Keyboard
+from telebot.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
+import time  # Temporary module
+import config  # Bot configuration, all settings are listed here
 
-bot = TeleBot(conf.BOT_TOKEN)
+bot = TeleBot(config.BOT_TOKEN)
 
 
 @bot.message_handler(commands=['start'])
