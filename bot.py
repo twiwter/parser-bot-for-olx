@@ -3,6 +3,7 @@ from telebot import TeleBot  # Bot module
 from telebot.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 import time  # Temporary module
 import config  # Bot configuration, all settings are listed here
+import database
 
 bot = TeleBot(config.BOT_TOKEN)
 
@@ -11,7 +12,9 @@ bot = TeleBot(config.BOT_TOKEN)
 def start(message):
     '''Start the bot, gives instructions on how to use the bot,
      creates a cell in the database for the client'''
-    pass
+    user = database.CreateUser(message.from_user.username)
+    if user.AddUserToDB():
+        print('Its all right')
 
 
 @bot.message_handler(commands=['help'])
