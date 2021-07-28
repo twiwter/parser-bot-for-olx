@@ -1,4 +1,9 @@
 from telebot import TeleBot  # Bot module
+# Modules for Inline Keyboard
+from telebot.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
+import time  # Temporary module
+import config  # Bot configuration, all settings are listed here
+import database
 import time  # Temporary module
 import config  # Bot configuration, all settings are listed here
 
@@ -9,7 +14,9 @@ bot = TeleBot(config.BOT_TOKEN)
 def start(message):
     '''Start the bot, gives instructions on how to use the bot,
      creates a cell in the database for the client'''
-    pass
+    user = database.CreateUser(message.from_user.username)
+    if user.AddUserToDB():
+        bot.send_message(message.chat.id, 'Hello!')
 
 
 @bot.message_handler(commands=['help'])

@@ -1,6 +1,12 @@
-BOT_TOKEN = '1874638072:AAGwUF6R-ZbMlXsCgZo4g6POb-3VlDy0gfc'  # Bot token
+from telebot.types import InlineKeyboardButton
+
+BOT_TOKEN = '1874638072:AAGqNKBzWcAXbd7URg5uCjtoGu5iV-t34_s'  # Bot token
 
 BOT_SETTINGS = {
-    'language': ['русский', 'українська'],
+    'language': (['🇷🇺 Русский', 'ru'], ['🇺🇦 Українська', 'ua']),
     'placement': None
+}
+
+setting_screens = {
+    'first': 'Some text'
 }
