@@ -4,6 +4,8 @@ from telebot.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMar
 import time  # Temporary module
 import config  # Bot configuration, all settings are listed here
 import database
+import time  # Temporary module
+import config  # Bot configuration, all settings are listed here
 
 bot = TeleBot(config.BOT_TOKEN)
 
